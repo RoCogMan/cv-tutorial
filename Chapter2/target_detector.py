@@ -21,8 +21,8 @@ class TargetDetector:
         self.dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         self.board = cv2.aruco.CharucoBoard(
             (8, 8),
-            20.0 * 1e-3,
-            15.0 * 1e-3,
+            22.5 * 1e-3,
+            16.875 * 1e-3,
             self.dict,
         )
         self.board.setLegacyPattern(True)  # calib.io이 legacy pattern을 사용
