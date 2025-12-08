@@ -2,6 +2,7 @@ import open3d as o3d
 import numpy as np
 import os
 import sys
+from scipy.spatial.transform import Rotation as R
 
 # 아웃라이어 생성
 def make_outliers(target, num_outliers=500):
@@ -51,6 +52,15 @@ if mode == "noise":
     target = add_noise_to_points(target, param)
 elif mode == "outlier":
     target = make_outliers(target, param)
+
+euler_angles = [30, 45, 60]  # 단위: degrees
+translations = np.array([0.1, 0.2, 0.3]) # 단위: m
+r = R.from_euler('xyz', euler_angles, degrees=True)
+rotations = r.as_matrix()
+target_transform = np.identity(4)
+target_transform[:3, :3] = rotations
+target_transform[:3, 3] = translations
+target.transform(target_transform)
 
 source.paint_uniform_color([1.0, 0.0, 0.0])
 target.paint_uniform_color([0.0, 0.0, 1.0])
@@ -105,5 +115,5 @@ print(result_icp)
 print(result_icp.transformation)
 
 # 시각화
-source_temp = source.transform(result_icp.transformation)
-o3d.visualization.draw_geometries([source_temp, target])
+# source_temp = source.transform(result_icp.transformation)
+o3d.visualization.draw_geometries([source, target])
