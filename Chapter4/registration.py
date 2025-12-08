@@ -115,5 +115,6 @@ print(result_icp)
 print(result_icp.transformation)
 
 # 시각화
-# source_temp = source.transform(result_icp.transformation)
 o3d.visualization.draw_geometries([source, target])
+source_temp = source.transform(result_icp.transformation)
+o3d.visualization.draw_geometries([source_temp, target])
