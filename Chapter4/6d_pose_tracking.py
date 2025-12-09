@@ -3,6 +3,7 @@ import numpy as np
 import open3d as o3d
 import sys
 import cv2
+import os
 
 roi = None
 drawing = False
@@ -194,7 +195,8 @@ if len(sys.argv) > 1:
 
 # 고양이 모델 로드
 voxel_size = 0.005
-model = o3d.io.read_point_cloud("models/cat_half.ply")
+current_dir = os.getcwd()
+model = o3d.io.read_point_cloud(os.path.join(current_dir, "models","cat_half_back.ply"))
 model_down = model.voxel_down_sample(voxel_size)
 model_down.paint_uniform_color([0.7, 0.7, 0.7])
 model_fpfh = o3d.pipelines.registration.compute_fpfh_feature(
