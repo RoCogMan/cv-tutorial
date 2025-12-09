@@ -39,7 +39,7 @@ def main():
         imgs.append(img)
 
         cv2.imshow("img", img)  # 해당 결과를 시각화
-        cv2.waitKey(10)
+        cv2.waitKey(0)
 
     # 카메라 캘리브레이션 수행
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 0.01)
@@ -56,6 +56,7 @@ def main():
         undistorted = cv2.undistort(
             img, cam_mat, dist_coeffs
         )  # 캘리브레이션 결과를 이용하여 왜곡 보정
+        undistorted = undistorted[240:840, 320:1120]
         cv2.imshow("img", undistorted)  # 결과를 시각화
         cv2.waitKey(0)
 
