@@ -18,8 +18,8 @@ def draw_board_bbox(img, rvec, tvec, detector, color=(0,255,0), thickness=2):
         [0,           0,        0],
         [nx*s,    0,        0],
         [nx*s, ny*s,    0],
-        [0,        ny*s,    0],
-    ], dtype=np.float32)
+        [0,        ny*s,    0]
+    ])
 
     # 투영
     corners_2d, _ = cv2.projectPoints(
