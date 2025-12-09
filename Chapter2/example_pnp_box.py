@@ -16,9 +16,9 @@ def draw_board_bbox(img, rvec, tvec, detector, color=(0,255,0), thickness=2):
     # 보드 네 꼭짓점 (Charuco 좌표계 기준)
     obj_corners_3d = np.array([
         [0,           0,        0],
-        [(nx-1)*s,    0,        0],
-        [(nx-1)*s, (ny-1)*s,    0],
-        [0,        (ny-1)*s,    0],
+        [nx*s,    0,        0],
+        [nx*s, ny*s,    0],
+        [0,        ny*s,    0],
     ], dtype=np.float32)
 
     # 투영
