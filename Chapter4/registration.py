@@ -44,7 +44,7 @@ if len(sys.argv) > 2:
 
 # 포인트 클라우드 로드
 current_dir = os.getcwd()
-source = o3d.io.read_point_cloud(os.path.join(current_dir, "models", "cat_half.ply"))
+source = o3d.io.read_point_cloud(os.path.join(current_dir, "models", "cat_half_back.ply"))
 target = o3d.io.read_point_cloud(os.path.join(current_dir, "models", "cat.ply"))
 
 
