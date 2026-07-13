@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['cat']
+
+roboflow:
+  workspace: robotvision-1bkc2
+  project: yolo_class-n0zun
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/robotvision-1bkc2/yolo_class-n0zun/dataset/1
