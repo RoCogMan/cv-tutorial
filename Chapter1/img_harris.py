@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # 이미지 불러오기 (그레이스케일)
-img = cv2.imread("lenna.jpg")
+img = cv2.imread("chess2.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray = np.float32(gray)
 
