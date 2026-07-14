@@ -4,7 +4,7 @@ import numpy as np
 
 
 # 1. 이미지 불러오기
-img = cv2.imread("lenna.jpg", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("sample.jpg", cv2.IMREAD_GRAYSCALE)
 ret, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 
 # 2. 커널 생성
