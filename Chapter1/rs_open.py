@@ -10,7 +10,6 @@ while True:
     frames = pipeline.wait_for_frames()
     frame = frames.get_color_frame()
     frame = np.asanyarray(frame.get_data())
-    frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
 
     cv2.imshow("Camera", frame)  # 프레임을 창에 표시
 

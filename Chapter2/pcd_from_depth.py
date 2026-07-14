@@ -17,8 +17,6 @@ u, v = np.meshgrid(np.arange(width), np.arange(height))
 
 Z = depth.astype(np.float32) / 1000.0 # mm -> m
 
-X = (u - cx) * Z / fx
-Y = (v - cy) * Z / fy
 
 points = np.stack((X, Y, Z), axis=-1)
 print("PointCloud shape:", points.shape)

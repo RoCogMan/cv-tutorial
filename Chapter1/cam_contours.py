@@ -14,7 +14,7 @@ while True:
         break
 
     # 그레이 스케일 변환
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
 
     # 이진화
     _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY+ cv2.THRESH_OTSU)

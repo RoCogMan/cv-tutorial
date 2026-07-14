@@ -5,8 +5,9 @@ import numpy as np
 image = cv2.imread('lenna.jpg')
 def translate_image(img, tx=700, ty=50):
     rows, cols = img.shape[:2]
-    M = np.array([[1, 0, tx],
-                  [0, 1, ty]], dtype=np.float32)
+
+
+
     new_cols = cols + abs(tx)
     new_rows = rows + abs(ty)
     return cv2.warpAffine(img, M, (new_cols, new_rows))

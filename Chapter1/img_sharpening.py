@@ -9,9 +9,6 @@ img = cv2.imread("lenna.jpg")
 
 
 # 3x3 샤프닝 커널 정의
-sharpening_kernel = np.array([[ -1, -1,  -1],
-                               [-1,  9, -1],
-                               [ -1, -1,  -1]])
 
 
 

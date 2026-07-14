@@ -8,7 +8,6 @@ img = cv2.imread("lenna.jpg")
 
 
 # 가우시안 블러 적용 (커널 크기 25x25, 표준편차 5)
-blurred = cv2.GaussianBlur(img, (25,25), 5)
 
 
 

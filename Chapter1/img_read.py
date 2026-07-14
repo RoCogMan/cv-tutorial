@@ -13,7 +13,6 @@ cv2.imwrite('output.jpg', img)  # img를 'output.jpg'로 저장
 
 
 # 이미지 표시
-cv2.imshow('Image', img)
 
 
 

@@ -7,6 +7,7 @@ image = cv2.imread(image_path)
 orig_h, orig_w = image.shape[:2]
 disp_img = cv2.resize(image, None, fx=display_scale, fy=display_scale)
 points = []
+
 def select_points(event, x, y, flags, param):
     global points, disp_img
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -17,6 +18,7 @@ def select_points(event, x, y, flags, param):
             real_y = int(y / display_scale)
             points.append((real_x, real_y))
             print(f"점 선택됨 (표시 좌표 = {(x,y)}) → (실제 좌표 = {(real_x,real_y)})")
+
 cv2.namedWindow("Select 4 Points")
 cv2.setMouseCallback("Select 4 Points", select_points)
 print("'좌상 → 우상 → 좌하 → 우하' 순으로 4개의 점을 클릭하세요.")
@@ -30,12 +32,14 @@ while True:
 cv2.destroyAllWindows()
 src = np.float32(points)
 width, height = 400, 600
-dst = np.float32([
-    [0, 0],
-    [width - 1, 0],
-    [0, height - 1],
-    [width - 1, height - 1]
-])
+
+
+
+
+
+
+
+
 
 M = cv2.getPerspectiveTransform(src, dst)
 corrected = cv2.warpPerspective(image, M, (width, height))

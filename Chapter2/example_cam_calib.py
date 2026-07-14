@@ -16,10 +16,15 @@ def main():
     imgs = []
     for img_path in img_paths:
         img = cv2.imread(img_path)  # 이미지를 불러오기
+
         marker_corners, marker_ids = detector.detect_aruco(img)  # 마커 검출 시도
-        charuco_corners, charuco_ids = detector.detect_charuco(
-            img, marker_corners, marker_ids
-        )  # checkerboard 코너 검출 시도
+
+
+
+
+
+
+
 
         img = detector.draw_aruco(
             img, marker_corners, marker_ids

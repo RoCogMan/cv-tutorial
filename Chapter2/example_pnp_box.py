@@ -76,13 +76,14 @@ def main():
             rvec = pose.rvec
             tvec = pose.tvec
 
-            # bounding box 추가
-            vis_img = draw_board_bbox(vis_img, rvec, tvec, detector)
 
-            # 이미지 표시
-            cv2.imshow("Charuco", vis_img)
-            if cv2.waitKey(1) == 27:
-                break
+
+
+
+
+
+
+
 
     except KeyboardInterrupt:
         pass

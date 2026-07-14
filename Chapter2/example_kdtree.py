@@ -26,7 +26,9 @@ brute_avg = (time.perf_counter() - start) / ITERS
 
 
 # 4
-kdtree = o3d.geometry.KDTreeFlann(pcd)
+
+
+
 start = time.perf_counter()
 for _ in range(ITERS):
     k, idx, dist = kdtree.search_knn_vector_3d(query, 1)

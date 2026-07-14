@@ -2,7 +2,8 @@ import open3d as o3d
 
 pcd = o3d.io.read_point_cloud("cat.ply")
 
-voxel_sizes = [0.001, 0.005, 0.01]
+
+
 
 for v in voxel_sizes:
     down = pcd.voxel_down_sample(voxel_size=v)

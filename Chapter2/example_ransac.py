@@ -9,7 +9,7 @@ a, b, c, d = plane_model
 print(f"Plane: {a:.4f} x + {b:.4f} y + {c:.4f} z + {d:.4f} = 0")
 
 inlier_cloud = pcd.select_by_index(inliers)
-outlier_cloud = pcd.select_by_index(inliers, invert=True)
+
 
 inlier_cloud.paint_uniform_color([1.0, 0.0, 0.0])
 outlier_cloud.paint_uniform_color([0.5, 0.5, 0.5])

@@ -14,7 +14,8 @@ neighbor_clouds = []
 
 for q in query_points:
     k = 200
-    _, idx, _ = pcd_tree.search_knn_vector_3d(q, k)
+
+
     all_neighbors.append(idx)
 
     # 쿼리 포인트 (빨강)

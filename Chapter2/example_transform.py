@@ -4,7 +4,7 @@ from copy import deepcopy
 
 pcd = o3d.io.read_point_cloud("cat.ply")
 
-theta = np.radians(30)
+
 R = pcd.get_rotation_matrix_from_xyz((0, 0, theta))
 
 T = np.eye(4)

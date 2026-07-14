@@ -16,7 +16,14 @@ def main():
     )  # 반지름이 0.1인 구 생성
     sphere.compute_vertex_normals()  # 법선 벡터 계산 수행
 
-    sphere.translate(np.array([0.0, 0.0, 1.0]) * SCALE)  # 정면 방향으로 1.0만큼 이동
+
+
+
+
+
+
+
+
     right_sphere = deepcopy(sphere).translate(
         np.array([0.3, 0.0, 0.0]) * SCALE
     )  # 우측으로 0.3만큼 이동

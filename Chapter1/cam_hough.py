@@ -16,7 +16,7 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # 캐니 엣지 검출
-    edges = cv2.Canny(gray, 50, 150)
+
 
     # 허프 변환으로 직선 검출
     lines = cv2.HoughLinesP(edges, 1, np.pi/180, threshold=100,minLineLength=50, maxLineGap=10)

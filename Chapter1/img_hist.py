@@ -14,7 +14,6 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 
 # 히스토그램 계산
-hist = cv2.calcHist([gray], [0], None, [256], [0, 256])
 
 
 

@@ -8,7 +8,6 @@ img = cv2.imread("lenna.jpg")
 
 
 # 평균 블러링 적용 (3x3 커널)
-blurred = cv2.blur(img, (30, 30))
 
 
 

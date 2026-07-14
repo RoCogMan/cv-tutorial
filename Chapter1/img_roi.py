@@ -18,7 +18,6 @@ x, y, w, h = r
 
 
 # ROI 영역 잘라내기
-roi = img[y:y+h, x:x+w]
 
 
 
