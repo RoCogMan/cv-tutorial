@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # 1. 이미지 불러오기 (BGR 그대로 불러온 뒤 B 채널 사용)
-img = cv2.imread("lenna.jpg")
+img = cv2.imread("sample.jpg")
 
 
 # 2. 오츠 알고리즘을 이용한 자동 임계값 이진화
