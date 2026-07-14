@@ -3,7 +3,7 @@ import cv2
 
 
 # 1. 이미지 불러오기 (흑백 변환)
-img = cv2.imread("lenna.jpg", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("cameraman.jpg", cv2.IMREAD_GRAYSCALE)
 
 
 
